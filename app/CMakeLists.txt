@@ -18,7 +18,7 @@ add_library( # Lib Name.
 
 
 add_library( OpenCL SHARED IMPORTED )
-set_target_properties(OpenCL PROPERTIES IMPORTED_LOCATION /home/linuxdev/Development/Android/AndroidStudioApplications/AndroCL/app/src/main/jniLibs/${ANDROID_ABI}/libOpenCL.so)
+set_target_properties(OpenCL PROPERTIES IMPORTED_LOCATION /home/saket/AndroCL/app/src/main/jniLibs/${ANDROID_ABI}/libOpenCL.so)
 
 find_library( log-lib log )
 

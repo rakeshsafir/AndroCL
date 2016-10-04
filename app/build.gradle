@@ -12,11 +12,11 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         ndk {
-            abiFilters "armeabi-v7a"
+            abiFilters "arm64-v8a"
         }
         externalNativeBuild {
             cmake {
-                arguments '-DANDROID_PLATFORM=android-24','-DANDROID_TOOLCHAIN=clang','-DANDROID_STL=gnustl_static'
+                arguments '-DANDROID_PLATFORM=android-24', '-DANDROID_TOOLCHAIN=clang', '-DANDROID_STL=gnustl_static'
                 cppFlags "-frtti -fexceptions"
             }
         }
@@ -41,5 +41,6 @@ android {
         compile 'com.android.support:appcompat-v7:24.2.1'
         testCompile 'junit:junit:4.12'
     }
+    sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/assets/'] } }
 }
 
